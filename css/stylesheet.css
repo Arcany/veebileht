@@ -1,0 +1,152 @@
+body {
+	position: relative;
+	background-image: url("background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	padding-bottom: 6rem;
+}
+
+#header {
+	height: 100px;
+	width: 100%;
+}
+
+#header:hover {
+	transition: .5s ease;
+	background-color: white;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+
+#header ul {
+	list-style-type: none;
+}
+
+#header ul li {
+	float: left;
+	padding: 35px;
+	color: black;
+}
+
+#header ul li:hover {
+	//background-color: #8b6ce0;
+	border-radius: 2px;
+	background-image: url("thead.jpg");
+    background-repeat: repeat;
+}
+
+#header ul a {
+	font-size: 25px;
+	color: white;
+	text-decoration: none;
+	font-family: Trebuchet MS;
+}
+
+.pilt {
+	float: left;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 20px;
+}
+
+.pilt img {
+	border-radius: 50%;
+}
+
+#footer {
+	position:absolute;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	background-color: white;
+	opacity: 0.6;
+}
+
+#footer:hover {
+	opacity: 0.85;
+	background-image: url("thead.jpg");
+}
+
+.copyright {
+	float: left;
+	font-size: 18px;
+	padding-left: 20px;
+	padding-top: 10px;
+	color: black;
+}
+
+.modified {
+	float: right;
+	font-size: 18px;
+	padding-right: 20px;
+	padding-top: 10px;
+	color: black;
+}
+
+#content {
+	width: 80%;
+	padding-left: 10%;
+}
+
+#content h1 {
+	font-family: Courier New;
+	font-size: 48px;
+	color: white;
+}
+
+#content h2 {
+	font-family: Courier New;
+	font-size: 36px;
+	padding-left: 40px;
+	color: white;
+}
+
+#content p {
+	font-family: Courier New;
+	font-size: 24px;
+	color: white;
+	text-align: justify;
+}
+
+#content p:hover {
+	transition: .5s ease;
+	opacity: 0.7;
+	padding: 25px;
+	border-radius: 25px;
+	background-image: url("thead.jpg");
+    background-repeat: repeat;
+}
+
+#content table {
+	width: 100%;
+	background-color: #8b6ce0;
+	border-radius: 25px;
+	opacity: 0.9;
+	font-size: 24px;
+}
+
+#content table td {
+	color: white;
+}
+
+#content table tr:hover {
+	background-color: #bdabed;
+}
+
+#content table tr .thead {
+	background-image: url("thead.jpg");
+    background-repeat: repeat-x;
+	opacity: 0.9;
+}
+
+#content img {
+	padding-right: 50px;
+	padding-bottom: 50px;
+}
+
+#content img:hover {
+	opacity: 0.7;
+}
