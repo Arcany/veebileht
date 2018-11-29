@@ -14,11 +14,8 @@ body {
 
 #header:hover {
 	transition: .5s ease;
-	background-color: white;
-	border-bottom-left-radius: 25px;
-	border-bottom-right-radius: 25px;
-	border-top-left-radius: 25px;
-	border-top-right-radius: 25px;
+	background-color: black;
+	opacity: 0.7;
 }
 
 #header ul {
@@ -28,21 +25,48 @@ body {
 #header ul li {
 	float: left;
 	padding: 35px;
-	color: black;
 }
 
 #header ul li:hover {
-	//background-color: #8b6ce0;
 	border-radius: 2px;
-	background-image: url("thead.jpg");
-    background-repeat: repeat;
+	background-color: #0e9cca;
+	//background-image: url("thead.jpg");
+    //background-repeat: repeat;
+}
+
+#header ul li:hover .levelid {
+	display: inline-block;
 }
 
 #header ul a {
 	font-size: 25px;
-	color: white;
 	text-decoration: none;
 	font-family: Trebuchet MS;
+	color: white;
+}
+
+.levelid {
+	display: none;
+	position: absolute;
+	background-color: #0d92bf;
+	//background-image: url("thead.jpg");
+	//background-repeat: repeat-x;
+	box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	padding: 8px;
+	border-radius: 10px;
+}
+
+.levelid a {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.levelid a:hover {
+	background-color: #0c80a7;
+	border-radius: 3px;
 }
 
 .pilt {
@@ -54,6 +78,7 @@ body {
 
 .pilt img {
 	border-radius: 50%;
+	border-color: white;
 }
 
 #footer {
@@ -61,13 +86,8 @@ body {
 	bottom: 0;
 	height: 50px;
 	width: 100%;
-	background-color: white;
+	background-color: black;
 	opacity: 0.6;
-}
-
-#footer:hover {
-	opacity: 0.85;
-	background-image: url("thead.jpg");
 }
 
 .copyright {
@@ -75,7 +95,7 @@ body {
 	font-size: 18px;
 	padding-left: 20px;
 	padding-top: 10px;
-	color: black;
+	color: white;
 }
 
 .modified {
@@ -83,7 +103,7 @@ body {
 	font-size: 18px;
 	padding-right: 20px;
 	padding-top: 10px;
-	color: black;
+	color: white;
 }
 
 #content {
@@ -94,20 +114,20 @@ body {
 #content h1 {
 	font-family: Courier New;
 	font-size: 48px;
-	color: white;
+	color: black;
 }
 
 #content h2 {
 	font-family: Courier New;
 	font-size: 36px;
 	padding-left: 40px;
-	color: white;
+	color: black;
 }
 
 #content p {
 	font-family: Courier New;
 	font-size: 24px;
-	color: white;
+	color: black;
 	text-align: justify;
 }
 
@@ -116,8 +136,9 @@ body {
 	opacity: 0.7;
 	padding: 25px;
 	border-radius: 25px;
-	background-image: url("thead.jpg");
-    background-repeat: repeat;
+	background-color: #0e9cca;
+	//background-image: url("thead.jpg");
+    //background-repeat: repeat;
 }
 
 #content table {
@@ -129,7 +150,7 @@ body {
 }
 
 #content table td {
-	color: white;
+	color: black;
 }
 
 #content table tr:hover {
@@ -145,8 +166,82 @@ body {
 #content img {
 	padding-right: 50px;
 	padding-bottom: 50px;
+
 }
 
 #content img:hover {
 	opacity: 0.7;
+	cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
 }
